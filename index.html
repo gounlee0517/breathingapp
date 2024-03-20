@@ -115,7 +115,7 @@
             /* 추가된 스타일들 */
             .start-button {
                 margin-top: 20px;
-				margin-bottom: 50px;
+                margin-bottom: 20px;
                 padding: 10px 20px;
                 background-color: #55b7a4;
                 border: none;
@@ -137,7 +137,7 @@
         <div class="container" id="container">
             <div class="circle"></div>
             <p id="text"></p>
-            <div class="pointer-container">
+            <div class="pointer-container" style="display: none">
                 <span class="pointer"></span>
             </div>
             <div class="gradient-circle"></div>
@@ -164,6 +164,8 @@
             function breathAnimation() {
                 text.innerText = 'Breathe In!';
                 container.className = 'container grow';
+
+                document.querySelector('.pointer-container').style.display = 'block';
 
                 setTimeout(() => {
                     text.innerText = 'Hold';
